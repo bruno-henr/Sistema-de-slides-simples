@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        
+    }
+    body{
+        margin-top: 80px;
+        background-color: #4a4a4a;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 500px;
+    }
+    .slide-single{
+        width: 100%;height: 100%;
+        background-color: gray;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .bullets{
+        position: absolute;
+        z-index: 2;
+        left: 50%;
+        bottom: 10px;
+        transform: translateX(-50%);
+    }
+    .bullets span{
+        margin: 0 10px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: #ccc;
+        cursor: pointer;
+    }
+    .bullets span.active-slide{
+        background-color: white;
+    }
+</style>
+<body>
+
+<div class="container">
+    <div class="slide-single" style="background-image: url('img/unnamed.jpg');"></div>
+    <div class="slide-single" style="background-image: url('img/harley.jpg');"></div>
+    <div class="slide-single" style="background-image: url('img/harleybob.jpg');"></div>
+
+    <div class="bullets">
+        
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="slider.js"></script>
+</body>
+</html>
